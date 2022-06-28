@@ -1,0 +1,12 @@
+.proyect_Container {   
+    max-width: 80vw;
+    margin: 1.1em auto;    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+        
+}

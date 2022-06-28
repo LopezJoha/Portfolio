@@ -1,0 +1,11 @@
+.container_Skills {
+    width: 80vw;
+    margin: 1.1em auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+

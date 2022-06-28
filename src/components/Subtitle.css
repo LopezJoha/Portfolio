@@ -1,0 +1,16 @@
+
+.subtitle_h3 {
+    font-size: 5vw;
+    font-weight: 200;
+    color: #FFFFFF;
+    -webkit-text-stroke: 1px #191919; 
+    letter-spacing: .5px;
+    text-align: center;
+    line-height: 100%;
+}
+
+.subtitle_h3 span{
+    -webkit-text-stroke: 1px #5199FF;
+    color:#191919; 
+    white-space:pre;
+}

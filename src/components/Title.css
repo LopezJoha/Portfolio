@@ -1,0 +1,11 @@
+
+.title {
+    margin: 10px;
+    font-family: 'Anton';
+    font-size: 11vw;
+    font-weight: 300;
+    text-align: center;
+    text-align-last: center;
+    color: #303030;
+    line-height: 15vw;
+}
