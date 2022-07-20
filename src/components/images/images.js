@@ -31,6 +31,12 @@ import Colombia from './Colombia.png';
 import Usa from './UnitedStates.png';
 import Colombia64 from './Colombia64.png';
 import Usa64 from './Usa64.png';
+import profile from './profilephoto.png';
+import expand from './expand.png';
+import expandsvg from './expand-svg.svg';
+import close from './close.png';
+import closeSVG from './closeSVG.svg';
+import closeW from './close-white.png';
 
 export default {
     "img1":uno, 
@@ -65,5 +71,11 @@ export default {
     "imgCol": Colombia, 
     "imgUsa": Usa,
     "imgCol64": Colombia64, 
-    "imgUsa64": Usa64
+    "imgUsa64": Usa64, 
+    "profile" : profile,
+    "expand": expand,
+    "expandsvg" : expandsvg,
+    "close": close,
+    "closeSVG": closeSVG,
+    "closeW": closeW
 }

@@ -1,41 +1,67 @@
-
-import React, {useState} from 'react'; 
 import Project from './Project';
 import ProjectsListcss from './Projects_List.css';
-import images from './images/images';
 
 
-const Project_List = () => {
-    const [projects, setProjects] = useState ([
-        {
-            id:'1',
-            name:'Chowé', 
-            img:images.img23,
-            link:"http://www.chowe.co/"
-        },
-        {
-            id:'2',
-            name:'Beyond the Experience', 
-            img:images.img24,
-            link:"https://beyondthexperience.com/"            
-        }
-
-    ]);
-
+const Project_List = (props) => {
+    
     return(
         <div className='proyect_Container'>
-            {projects.map((project) => {
+            {props.Data.map((project) => {
                 return (
                     <Project
-                    key={project.id}
-                    name={project.name}
-                    img={project.img}
-                    link={project.link}/>
+                        key={project.id}
+                        name={project.name}
+                        img={project.img}
+                        link={project.link}  
+                        funcion={props.funcion} 
+                        funcion2={props.funcion2}                                                           
+                        modalIsOpen={props.modalIsOpen}                                
+                    />
                 )
-            })}
+            })} 
         </div>
     );
 
 }; 
 
 export default Project_List;
+
+
+// const PROJECTS = ([
+//     {
+//         id:'1',
+//         name:'Chowé', 
+//         img: images.img23,
+//         link:"http://www.chowe.co/",
+//         // imgButton: images.expand
+//     },
+//     {
+//         id:'2',
+//         name:'Beyond the Experience', 
+//         img:images.img24,
+//         link:"https://beyondthexperience.com/", 
+//         // imgButton: images.expand    
+//     }
+
+// ]);
+
+
+// const Project_List = (props) => {  
+// return(
+//     <div className='proyect_Container'>
+//         {PROJECTS.map((project) => {
+//             return (
+//                 <Project
+//                     key={project.id}
+//                     name={project.name}
+//                     img={project.img}
+//                     link={project.link}  
+//                     funcion={props.funcion}                                                           
+//                 />
+            
+//             )
+//         })}
+//     </div>
+// );
+
+// }; 

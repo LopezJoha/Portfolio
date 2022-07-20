@@ -1,17 +1,25 @@
 import React from 'react'; 
 import './Project.css';
-import {motion} from 'framer-motion'; 
 
 
-const Project = (props) => {
+
+const Project = ({img, link, name, funcion, funcion2, modalIsOpen }) => {
+
+    const doFunctions = () => {
+        funcion(!modalIsOpen);
+        funcion2({
+            img: img,
+            link: link,
+            name: name,
+        });
+    }
+
     return ( 
-        <motion.div className='proyect_Card'
-             whileHover={{ scale: 1.3 }}
-             transition={{ duration: 0.5 }}
-        >        
-            <img src={props.img}/>
-            <a href={props.link} className='project-Button' target="_blank"><button >{props.name}</button></a>
-        </motion.div>                
+        <div className='proyect_Card' onClick={doFunctions}>        
+            <img src={img}/>
+            <a href={link} className='project-Button' target="_blank"><button >{name}</button></a>
+        </div>                
+        
     );
 };
 

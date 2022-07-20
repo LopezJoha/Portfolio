@@ -19,7 +19,7 @@ const Top = (props) => {
                 <div className='header_Card'>
                     <div className='header_Content'>
                         <div className='header_Img'>
-                            <img src={images.img5}/>
+                            <img src={images.profile}/>
                         </div>
                         <div className='header_Items'>
                             <h2>Hello!!</h2>
@@ -51,7 +51,7 @@ const Top = (props) => {
                 <div className='header_Card'>
                     <div className='header_Content'>
                         <div className='header_Img'>
-                            <img src={images.img5}/>
+                            <img src={images.profile}/>
                         </div>
                         <div className='header_Items'>
                             <h2>Hola!!</h2>
