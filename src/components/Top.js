@@ -9,17 +9,12 @@ const Top = (props) => {
         return (         
             <section>
               <div className='top_Title'>
-                    <h2 className='top_Title_h2'>
-                    PORT
-                    <span className='top_Title_span'>
-                    &nbsp;FOLIO
-                    </span>
-                    </h2>
+                    <h2 className='top_Title_h2'>PORT<span className='top_Title_span'>FOLIO</span></h2>
                 </div>
                 <div className='header_Card'>
                     <div className='header_Content'>
                         <div className='header_Img'>
-                            <img src={images.profile}/>
+                            <img className='imagen' src={images.profile}/>
                         </div>
                         <div className='header_Items'>
                             <h2>Hello!!</h2>
@@ -41,17 +36,12 @@ const Top = (props) => {
         return (           
             <section>
               <div className='top_Title'>
-                    <h2 className='top_Title_h2'>
-                    PORTA
-                    <span className='top_Title_span'>
-                    &nbsp;FOLIO
-                    </span>
-                    </h2>
+                    <h2 className='top_Title_h2'>PORTA<span className='top_Title_span'>FOLIO</span></h2>
                 </div>
                 <div className='header_Card'>
                     <div className='header_Content'>
                         <div className='header_Img'>
-                            <img src={images.profile}/>
+                            <img className='imagen' src={images.profile}/>
                         </div>
                         <div className='header_Items'>
                             <h2>Hola!!</h2>

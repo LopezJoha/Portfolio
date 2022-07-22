@@ -36,29 +36,27 @@ function ModalPopUp(props) {
           contentLabel="Project"
         >          
         <button
-          style={{
-          zIndex: '2',
-          position: 'absolute',
-          top: '1rem', 
-          right: '1rem', 
-          border: 'none',
-          background: 'transparent',                 
-          
+            style={{
+            zIndex: '2',
+            position: 'absolute',
+            top: '1rem', 
+            right: '1rem', 
+            border: 'none',
+            background: 'transparent'             
           }}
-          onClick={() => props.setIsOpen(false)}>
-          <img src={images.close} 
-            style={{cursor: 'pointer', 
-            background: 'transparent', 
-            color: 'oragered',
-            height: '20px',
-            alignSelf: 'flex-end', 
-            width: '30px', 
-            height: '30px'
-            
-            }}></img>
-          </button>     
 
-               
+          onClick={() => props.setIsOpen(false)}>
+            <img src={images.close} 
+              style={{cursor: 'pointer', 
+              background: 'transparent', 
+              color: 'oragered',
+              height: '20px',
+              alignSelf: 'flex-end', 
+              width: '30px', 
+              height: '30px'
+              }}>                
+            </img>
+          </button>    
 
           <Project 
             name={props.selectedProject.name}

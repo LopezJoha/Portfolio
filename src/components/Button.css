@@ -1,16 +1,12 @@
 .btn-language {
     height: 50px;
-    width: 64px;
+    width: 50px;
     border: none;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    background-color: #191919;
-    margin: 5px;
-    position: sticky;
-    top: 5px; 
-    z-index: 10;
-    
+    background-color: transparent;  
+    margin: 10px;   
 }
 
 .btn-language:hover{

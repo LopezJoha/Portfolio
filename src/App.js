@@ -13,6 +13,7 @@ import Button from './components/Button';
 import images from './components/images/images';
 import ModalPopUp from './components/ModalPopUp';
 import Data from './components/Data';
+import Toggle from './components/Toggle';
 
 
 
@@ -21,22 +22,27 @@ function App() {
   const [language, setLanguage] = React.useState('ENGLISH');
 
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  const [fruta, setFruta] = React.useState(false);
+  const [projectToShow, setProjectToShow] = React.useState(false);
+  const[isToggled, setIsToggled] = React.useState(false)
 
 
-
-  // const [modal, setModal] = React.useState(Data);
- 
+  function changeLanguage(){
+    if (language === 'ENGLISH') {
+      setLanguage('SPANISH')
+    } else{
+      setLanguage('ENGLISH')
+    }
+  } 
 
   return ( 
-    <div className='Container'>  
-        <Button
-          funcion={() => setLanguage("SPANISH")}
-          image= {images.imgCol64}/>
-
-        <Button
-          funcion={() => setLanguage("ENGLISH")}
-          image= {images.imgUsa64}/>      
+    <div className='Container'>         
+     
+      <Toggle
+        isToggled={isToggled}
+        onToggle={()=> setIsToggled(!isToggled)} 
+        language={language}
+        changeLanguage={changeLanguage}
+      />            
 
      <Top language={language}/>
 
@@ -51,20 +57,17 @@ function App() {
         title= {language === 'ENGLISH' ? "SKILLS" :"HABILIDADES" }
       />
       <Subtitle 
-        word1={ language === 'ENGLISH' ? "Design": "Habilidades en"  }
+        word1={ language === 'ENGLISH' ? "Design": "En"  }
         word2={language === 'ENGLISH' ? "Skills" : "Diseño"}                  
       />
       <Design_Skills/>
 
       <Subtitle 
-        word1={ language === 'ENGLISH' ? "Programming" : "Habilidades en"}
+        word1={ language === 'ENGLISH' ? "Programming" : "En"}
         word2={language === 'ENGLISH' ? "Skills" : "Programación " }       
       />
       <Programm_Skills />
 
-      <Title 
-        title= {language === 'ENGLISH' ? "DESIGN RESPONSIVE" :"DISEÑO RESPONSIVO"}
-      />
       <Title 
         title= {language === 'ENGLISH' ? "PROYECTS" : "PROYECTOS"}
       />
@@ -72,7 +75,7 @@ function App() {
           Data={Data}    
           modalIsOpen={modalIsOpen}    
           funcion={setIsOpen} 
-          funcion2={setFruta}         
+          funcion2={setProjectToShow}         
         
       />
       
@@ -80,11 +83,11 @@ function App() {
         modalIsOpen={modalIsOpen}
         isOpen={false}
         setIsOpen={setIsOpen}
-        selectedProject={fruta}    
+        selectedProject={projectToShow}    
       />
     </div>    
   );
-}
+};
 
 export default App;
 

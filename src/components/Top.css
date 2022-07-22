@@ -9,26 +9,27 @@ section {
 }
 
 .top_Title {
-    max-height: 40vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family:'Sayne', sans-serif; 
+    font-size: 2.2vw;
+    position: absolute;
+    left: 2vw;
+    top: 2vh;
+    color: #191919;
+    text-shadow: 3px 3px#303030;	
 }
   
-.top_Title_h2 {
-    font-family:'Sayne', sans-serif;
-    font-size: 11.5vw;
+.top_Title_h2 { 
+    -webkit-text-stroke: 0.7px white; 
     font-weight: 900;
-    text-shadow:  6px -12px#303030;				
-    color: white;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 }
   
 .top_Title_span {
-    text-shadow: -6px -12px  #303030, -7px -12px 1px #5199FF, 
-      .5px .5px #5199FF;	
-    -webkit-text-stroke: 0.7px #5199FF;
-    color: #191919; 
+    -webkit-text-stroke: 0.7px #5199FF; 
     font-weight: 900;
+    writing-mode: vertical-rl;
+    text-orientation: upright;  
 }
 
 .header_Card {
@@ -51,19 +52,18 @@ section {
 }
 
 .header_Img {     
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
     flex: 1 1 200px; 
+   
 }
 
-.header_Img img {
-    min-height: 150px;
-    max-height: 300px;
-    min-width: 150px; 
-    max-width: 350px;
-    flex: 1 1 200px;  
-}
+.imagen {   
+    max-width: 200px;
+    max-height: 250px;
+    flex: 1 1 250px;          
+} 
 
 .header_Items {
     font-family:'Port Lligat Slab', serif;
@@ -123,7 +123,7 @@ section {
     }
 }
 
-
+/* 
 @media only screen and (min-width: 600px) {
     .top_Title_h2 {
         text-shadow: 12px -25px  #303030;        
@@ -151,5 +151,5 @@ section {
         color: #191919; 
     }
 }
-   
+    */
 
