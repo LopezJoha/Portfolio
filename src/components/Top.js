@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import './Top.css'; 
 import images from './images/images';
 import Subtitle from './Subtitle';
+import NavBar from './NavBar';
+import Toggle from './Toggle';
 
 
 const Top = (props) => {
     if (props.language === 'ENGLISH'){
         return (         
             <section>
-              <div className='top_Title'>
+                <div className='top_Title'>
                     <h2 className='top_Title_h2'>PORT<span className='top_Title_span'>FOLIO</span></h2>
                 </div>
                 <div className='header_Card'>

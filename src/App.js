@@ -8,13 +8,16 @@ import Subtitle from './components/Subtitle';
 import Project_List from './components/Projects_List';
 import Design_Skills from './components/Design_Skills';
 import Programm_Skills from './components/Programm_Skills';
-import Button from './components/Button';
 
-import images from './components/images/images';
 import ModalPopUp from './components/ModalPopUp';
 import Data from './components/Data';
 import Toggle from './components/Toggle';
 
+import Fullpage, 
+{FullPageSections, 
+  FullpageSection, 
+  FullpageNavigation} from '@ap.cx/react-fullpage';
+import NavBar from './components/NavBar';
 
 
 function App() {  
@@ -35,61 +38,71 @@ function App() {
   } 
 
   return ( 
-    <div className='Container'>         
-     
+    <Fullpage>
+      <FullpageNavigation style={{cursor:'pointer'}}/>
+      <FullPageSections>
       <Toggle
-        isToggled={isToggled}
-        onToggle={()=> setIsToggled(!isToggled)} 
-        language={language}
-        changeLanguage={changeLanguage}
-      />            
+                isToggled={isToggled}
+                onToggle={()=> setIsToggled(!isToggled)} 
+                language={language}
+                changeLanguage={changeLanguage}
+              /> 
+        <FullpageSection className='section'>
+          <NavBar language={language}/>
+          <Top language={language}/>  
+        </FullpageSection>
 
-     <Top language={language}/>
+        <FullpageSection className='section'>
+            <Title 
+            title={language === 'ENGLISH' ?  "WEB DEVELOPER" :"DESARROLLADORA WEB"}/>
+          
+          <Subtitle 
+            word1={ language === 'ENGLISH'  ? "A little bit" :"" }
+            word2={language === 'ENGLISH'  ?  "   about me...": "   acerca de mi..."}/>
+        </FullpageSection>
 
-      <Title 
-        title={language === 'ENGLISH' ?  "WEB DEVELOPER" :"DESARROLLADORA WEB"}/>
-      
-      <Subtitle 
-        word1={ language === 'ENGLISH'  ? "A little bit" :"" }
-        word2={language === 'ENGLISH'  ?  "   about me...": "   acerca de mi..."}/>
+        <FullpageSection className='section'>
+            <Title 
+            title= {language === 'ENGLISH' ? "SKILLS" :"HABILIDADES" }
+                />
+            <Subtitle 
+              word1={ language === 'ENGLISH' ? "Design": "En"  }
+              word2={language === 'ENGLISH' ? "Skills" : "Diseño"}                  
+            />
+            <Design_Skills/>
 
-      <Title 
-        title= {language === 'ENGLISH' ? "SKILLS" :"HABILIDADES" }
-      />
-      <Subtitle 
-        word1={ language === 'ENGLISH' ? "Design": "En"  }
-        word2={language === 'ENGLISH' ? "Skills" : "Diseño"}                  
-      />
-      <Design_Skills/>
+            <Subtitle 
+              word1={ language === 'ENGLISH' ? "Programming" : "En"}
+              word2={language === 'ENGLISH' ? "Skills" : "Programación " }       
+            />
+            <Programm_Skills />
 
-      <Subtitle 
-        word1={ language === 'ENGLISH' ? "Programming" : "En"}
-        word2={language === 'ENGLISH' ? "Skills" : "Programación " }       
-      />
-      <Programm_Skills />
+        </FullpageSection>
 
-      <Title 
-        title= {language === 'ENGLISH' ? "PROYECTS" : "PROYECTOS"}
-      />
-      <Project_List 
-          Data={Data}    
-          modalIsOpen={modalIsOpen}    
-          funcion={setIsOpen} 
-          funcion2={setProjectToShow}         
-        
-      />
-      
-      <ModalPopUp
-        modalIsOpen={modalIsOpen}
-        isOpen={false}
-        setIsOpen={setIsOpen}
-        selectedProject={projectToShow}    
-      />
-    </div>    
-  );
+        <FullpageSection className='section'>
+            <Project_List 
+              Data={Data}    
+              modalIsOpen={modalIsOpen}    
+              funcion={setIsOpen} 
+              funcion2={setProjectToShow}        
+            />      
+            <ModalPopUp
+              modalIsOpen={modalIsOpen}
+              isOpen={false}
+              setIsOpen={setIsOpen}
+              selectedProject={projectToShow}    
+            />
+
+        </FullpageSection>
+      </FullPageSections>
+    </Fullpage>
+);
 };
+    
+
+    
+
 
 export default App;
-
 
 
