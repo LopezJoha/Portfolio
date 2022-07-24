@@ -1,7 +1,9 @@
 form{
     float: right;
-    padding-left: 30px5rem;
-    padding-top: 2rem;
+    z-index: 100;
+    position: fixed;
+    right: 5%;
+
     
 }
 

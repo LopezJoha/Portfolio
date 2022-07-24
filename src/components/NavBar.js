@@ -2,23 +2,33 @@ import React from 'react'
 
 function NavBar(props) {
 
-    if (props.language === 'ENGLISH'){
-        return (
-            <ul style={{display: 'flex', alignItems: 'center', justifyContent:'center', listStyle:'none'}}>
-                <li>Home</li>
-                <li>About Me</li>
-                <li>Projects</li>
+    const styles = {
+        width: '40vw',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center', 
+        listStyle: 'none', 
+        position: 'fixed', 
+        top: '0', 
+        right: '1%',
+        color: 'white', 
+        cursor: 'pointer'     
+    } 
+
+    return (
+        <div>
+            <div>
+
+            </div>
+            <ul style={styles}>
+                <li>{props.language === 'ENGLISH' ?  'Home' : 'Inicio'}</li>
+                <li>{props.language === 'ENGLISH' ?  'About Me' : 'Sobre mi'}</li>
+                <li>{props.language === 'ENGLISH' ?  'Projects' : 'Proyectos'}</li>
+                <li>{props.language === 'ENGLISH' ?  'Contact Me' : 'Contáctame'}</li>
             </ul>
-        )
-    } else {
-        return(
-            <ul style={{display: 'flex', alignItems: 'center', justifyContent:'center', listStyle:'none'}}>
-                <li>Inicio</li>
-                <li>Acerca de mí</li>
-                <li>Proyectos</li>
-            </ul>
-        )
-    }
+        </div>
+    )
+  
 }
 
 export default NavBar;

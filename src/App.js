@@ -39,23 +39,25 @@ function App() {
 
   return ( 
     <Fullpage>
-      <FullpageNavigation style={{cursor:'pointer'}}/>
-      <FullPageSections>
-      <Toggle
-                isToggled={isToggled}
-                onToggle={()=> setIsToggled(!isToggled)} 
-                language={language}
-                changeLanguage={changeLanguage}
-              /> 
+      <NavBar
+        language={language}
+      />
+     <FullpageNavigation style={{cursor:'pointer'}}/>
+      <FullPageSections>            
         <FullpageSection className='section'>
-          <NavBar language={language}/>
-          <Top language={language}/>  
+        <div style={{heigth: '90vh', width: '90vw', display: 'flex', justifyContent: 'space-around',
+        alignItems: 'center'}}>
+          <Top 
+            language={language}
+            isToggled={isToggled}
+            onToggle={()=> setIsToggled(!isToggled)}
+            changeLanguage={changeLanguage}/> 
+        </div> 
         </FullpageSection>
 
-        <FullpageSection className='section'>
-            <Title 
+        <FullpageSection className='section'>        
+          <Title 
             title={language === 'ENGLISH' ?  "WEB DEVELOPER" :"DESARROLLADORA WEB"}/>
-          
           <Subtitle 
             word1={ language === 'ENGLISH'  ? "A little bit" :"" }
             word2={language === 'ENGLISH'  ?  "   about me...": "   acerca de mi..."}/>
@@ -63,20 +65,15 @@ function App() {
 
         <FullpageSection className='section'>
             <Title 
-            title= {language === 'ENGLISH' ? "SKILLS" :"HABILIDADES" }
-                />
+              title= {language === 'ENGLISH' ? "SKILLS" :"HABILIDADES" }/>
             <Subtitle 
               word1={ language === 'ENGLISH' ? "Design": "En"  }
-              word2={language === 'ENGLISH' ? "Skills" : "Diseño"}                  
-            />
+              word2={language === 'ENGLISH' ? "" : "Diseño"}/>
             <Design_Skills/>
-
             <Subtitle 
               word1={ language === 'ENGLISH' ? "Programming" : "En"}
-              word2={language === 'ENGLISH' ? "Skills" : "Programación " }       
-            />
+              word2={language === 'ENGLISH' ? "" : "Programación " }/>
             <Programm_Skills />
-
         </FullpageSection>
 
         <FullpageSection className='section'>
@@ -90,10 +87,9 @@ function App() {
               modalIsOpen={modalIsOpen}
               isOpen={false}
               setIsOpen={setIsOpen}
-              selectedProject={projectToShow}    
-            />
-
+              selectedProject={projectToShow}/>
         </FullpageSection>
+
       </FullPageSections>
     </Fullpage>
 );

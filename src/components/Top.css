@@ -1,21 +1,21 @@
-section {
-    box-sizing: border-box;
-    width: 100vw;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.wrapperTop {
+    max-width: 90%;
+    max-height: 90%;
+        
 }
 
 .top_Title {
     font-family:'Sayne', sans-serif; 
-    font-size: 2.2vw;
-    position: absolute;
-    left: 2vw;
-    top: 2vh;
+    font-size: 2vw;
     color: #191919;
-    text-shadow: 3px 3px#303030;	
+    text-shadow: 3px 3px#303030;
+    
+    position: absolute;
+    left: 0;
+    top: 2%;  
+    display: flex;
+    justify-content: center; 
+    
 }
   
 .top_Title_h2 { 
@@ -35,7 +35,11 @@ section {
 .header_Card {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+    border: 5px solid black; 
+    width: 80vw;  
+    height: 70vh;
+   
 }
 
 .header_Content {
@@ -52,47 +56,43 @@ section {
 }
 
 .header_Img {     
-    width: 70%;
+    width: 60%;
     display: flex;
     justify-content: center;
     flex: 1 1 200px; 
+    align-items: center;
    
 }
 
 .imagen {   
-    max-width: 200px;
-    max-height: 250px;
+    max-width:52%;
+    max-height: 70%;
     flex: 1 1 250px;          
 } 
 
+
 .header_Items {
-    font-family:'Port Lligat Slab', serif;
-    font-size: 1.5em;
-    color: #F2F2FF; 
-    width: 50%;
-    min-width: 350px;
+    width: 40%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1 1 200px; 
-    line-height: 30%;
+    color: whitesmoke;
 }
 
 .header_Items h1{
-    font-size: 1.8em;
+    font-size: 2em;
+   
 }
 
 .header_Items h3{
-    font-size: 1em;
-    line-height: 100%;
+    font-size: 3em;
     text-align: center;
 }
 
 .media {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     row-gap: 20px;
     column-gap: 20px;
