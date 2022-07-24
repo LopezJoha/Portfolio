@@ -25,16 +25,20 @@ const Top = (props) => {
                     <h2 className='top_Title_h2'>{props.language === 'ENGLISH' ?  'PORT' : 'PORTA'}<span className='top_Title_span'>FOLIO</span></h2>
                 </div>
 
-                <div className='header_Items'>
-                    <h3>{props.language === 'ENGLISH' ?  'Web Software Developer Front-End' : 'Desarrolladora de Software Front End'}</h3>
-                    <h2>{props.language === 'ENGLISH' ?  'Hi.' : 'Hola.'}</h2>
-                    <h1>{props.language === 'ENGLISH' ?  "I'm": 'Soy'} Johana López</h1>
+                <div className='header_Img'>
+                    <div className='header_Igm_shade'>
+                        <img className='imagen' src={images.profile}/>
+                    </div>                    
+                </div>
+
+                <div className='header_Items'>                    
+                    {/* <h2>{props.language === 'ENGLISH' ?  'Hello!.' : 'Hola!.'}</h2> */}
+                    <h1>{props.language === 'ENGLISH' ?  "Hello! I'm": 'Hola! Soy'} Johana López</h1>
+                    <h3>{props.language === 'ENGLISH' ?  'Front-End Web Developer' : 'Desarrolladora de Software Front End'}</h3>
                     
                 </div>
 
-                <div className='header_Img'>
-                    <img className='imagen' src={images.profile}/>
-                </div>
+                
             </div> 
 
             <div className='media'>                            

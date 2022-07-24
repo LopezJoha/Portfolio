@@ -12,7 +12,8 @@ function NavBar(props) {
         top: '0', 
         right: '1%',
         color: 'white', 
-        cursor: 'pointer'     
+        cursor: 'pointer',
+        zIndex: '100'   
     } 
 
     return (
